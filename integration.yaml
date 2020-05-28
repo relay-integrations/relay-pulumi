@@ -1,15 +1,15 @@
 apiVersion: integration/v1
 kind: Integration
-name: template
+name: pulumi
 channel: stable
-version: v20200514
-summary: Integration template
+version: v20200601
+summary: Use pulumi.io with Relay
 license: Apache-2.0
-homepage: https://github.com/relay-integrations/template
-source: https://github.com/relay-integrations/template
+homepage: https://github.com/relay-integrations/relay-pulumi
+source: https://github.com/relay-integrations/relay-pulumi
 
 description: |
-  This is a template for creating a Relay Integration repository.
+  This integration lets you use pulumi actions inside a relay workflow.
 
 owner:
   name: Puppet, Inc.
@@ -17,5 +17,5 @@ owner:
   url: https://puppet.com
 
 tags:
-- template
+- pulumi
 - relay integration
