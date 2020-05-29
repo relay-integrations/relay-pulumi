@@ -1,0 +1,16 @@
+description: Example workflow to exercise pulumi
+parameters:
+  stack:
+    description: Path to stack's url on pulumi.io
+  action:
+    description: What to do - only 'preview' (default) or 'up'
+    default: preview
+
+steps:
+  - name: run preview on a stack
+    image: ahpook/pulumi-action-run
+    spec:
+      stack: !Parameter stack
+      action: !Parameter action
+      token: !Secret pulumitoken
+
