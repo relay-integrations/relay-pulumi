@@ -1,4 +1,4 @@
-FROM pulumi/pulumi:latest
+FROM pulumi/actions:latest
 RUN set -eux ; \
     mkdir -p /tmp/ni && \
     cd /tmp/ni && \
