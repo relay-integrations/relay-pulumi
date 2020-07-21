@@ -7,9 +7,9 @@
 # export all variables for use in the pulumi entrypoint
 set -a 
 # alternate backend to use, can be empty
-PULUMI_BACKEND_URL=$(ni get -p {.PULUMI_BACKEND_URL})
+PULUMI_BACKEND_URL=$(ni get -p {.pulumi_backend_url})
 # secret, needed to login
-PULUMI_ACCESS_TOKEN=$(ni get -p {.PULUMI_ACCESS_TOKEN})
+PULUMI_ACCESS_TOKEN=$(ni get -p {.pulumi_access_token})
 # for future use - these mimic running against a PR for CI
 PULUMI_CI=
 PULUMI_ROOT=
@@ -30,5 +30,10 @@ NPM_AUTH_TOKEN=
 # this becomes the commandline for the real entrypoint
 PULUMI_ARGS=$(ni get -p {.pulumi_commandline})
 GITHUB_TOKEN=$(ni get -p {.github_token})
+GITHUB_WORKSPACE=/workspace
+
+# ultra-simple copy of actions/checkout@v2 
+git clone $(jq .repository.git_url $GITHUB_EVENT_PATH) ${GITHUB_WORKSPACE}
+cd ${GITHUB_WORKSPACE}
 
 /usr/bin/pulumi-action ${PULUMI_ARGS}
