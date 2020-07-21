@@ -19,7 +19,7 @@ triggers:
 
 steps:
   - name: pulumi-run
-    image: relaysh/pulumi-action-run
+    image: relaysh/pulumi-step-run
     spec:
       pulumi_access_token: !Secret pulumi_access_token
       github_token: !Secret github_access_token
