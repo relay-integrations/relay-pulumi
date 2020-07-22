@@ -3,6 +3,16 @@
 This integration provides interoperability with
 [Pulumi](https://www.pulumi.com/).
 
+## Steps
+
+| Name | Description |
+| [pulumi-step-run](triggers/pulumi-step-run) | Runs pulumi in a CI-like environment on Relay |
+
+## Workflows
+
+| Name | Description |
+| [preview-workflow.yaml](workflows/preview-workflow.yaml) | Links Relay to a Pulumi application for 'preview'/'up' operations |
+
 ## Contributing
 
 ### Issues
