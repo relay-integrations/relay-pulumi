@@ -7,6 +7,7 @@ It is based on (and attempts compatibility with) the [pulumi/actions](https://ww
 ## Specification
 
 | Setting | Data type | Description | Default | Required |
+|---------|-----------|-------------|---------|----------|
 | pulumi_backend_url | String | Alternate backend specifier | api.pulumi.io | No |
 | event_payload | Stringified json | The complete payload of a github webhook | None | Yes |
 | pulumi_commandline | String | The commandline to pass through to `pulumi ...` | `preview` | No |
