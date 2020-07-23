@@ -1,14 +1,5 @@
 description: Example workflow to exercise pulumi/relay integration
 
-# To use this workflow:
-# - add it to your relay account
-# - configure a Slack connection called 'my-workspace' 
-#   (or change this code to match your real connection's name)
-# - add workflow secrets for your pulumi and github accounts 
-# - copy the webhook url from the relay UI
-# - in your pulumi app repo on github, go to settings->webhooks
-# - paste the webhook url and set it to execute on PRs
-
 parameters:
   pulumi_backend_url:
     description: Point at a self-hosted Pulumi backend service
