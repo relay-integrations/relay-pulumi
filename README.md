@@ -6,7 +6,8 @@ This integration provides interoperability with
 ## Steps
 
 | Name | Description |
-| [pulumi-step-run](triggers/pulumi-step-run) | Runs pulumi in a CI-like environment on Relay |
+|------|-------------|
+| [pulumi-step-run](steps/pulumi-step-run) | Runs pulumi in a CI-like environment on Relay |
 
 ## Workflows
 
