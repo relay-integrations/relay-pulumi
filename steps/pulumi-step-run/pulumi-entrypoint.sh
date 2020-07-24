@@ -33,7 +33,7 @@ GITHUB_TOKEN=$(ni get -p {.github_token})
 GITHUB_WORKSPACE=/workspace
 
 # ultra-simple copy of actions/checkout@v2 
-git clone $(jq .repository.git_url $GITHUB_EVENT_PATH) ${GITHUB_WORKSPACE}
+git clone $(jq .repository.ssh_url $GITHUB_EVENT_PATH) ${GITHUB_WORKSPACE}
 cd ${GITHUB_WORKSPACE}
 
 /usr/bin/pulumi-action ${PULUMI_ARGS}
