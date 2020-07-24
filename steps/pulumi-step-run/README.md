@@ -14,6 +14,6 @@ It is based on (and attempts compatibility with) the [pulumi/actions](https://ww
 
 The `event_payload` parameter is easiest to provide using the [`github-trigger-event-sink`](https://github.com/relay-integrations/relay-github/triggers/github-trigger-event-sink/) webhook trigger.
 
-See the example [`preview-workflow.yaml`](https://github.com/relay-integrations/relay-pulumi/workflows/preview-workflow.yaml) in this repository for a working example of using this step.
+See the [`github-relay-ci.yaml`](https://github.com/relay-integrations/relay-pulumi/workflows/github-relay-ci/) workflow for a working example using this step.
 
 
