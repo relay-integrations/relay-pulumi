@@ -1,5 +1,4 @@
-description: Example workflow to exercise pulumi/relay integration
-
+description: Example workflow to exercise Pulumi / Relay integration
 parameters:
   pulumi_backend_url:
     description: Point at a self-hosted Pulumi backend service
@@ -8,6 +7,9 @@ parameters:
   pulumi_commandline:
     description: What to do - only 'preview' (default) or 'up'
     default: preview
+  pulumi_stack:
+    description: Which stack to work on - defaults to 'dev'
+    default: dev
 
 triggers:
   - name: github-events
@@ -27,10 +29,11 @@ steps:
       pulumi_backend_url: !Parameter pulumi_backend_url
       event_payload: !Parameter event_payload
       pulumi_commandline: !Parameter pulumi_commandline
+      stack: !Parameter pulumi_stack
   - name: slack-output
     image: relaysh/slack-step-message-send
     spec:
       connection: !Connection { type: slack, name: my-workspace }
-      channel: prog-relay-testing
+      channel: relay-testing
       message: !Output {from: pulumi-run, name: output}
       username: relayerbot
