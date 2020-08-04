@@ -1,10 +1,10 @@
 apiVersion: integration/v1
-kind: Trigger
+kind: Step
 name: template
 version: 1
-summary: Trigger template
+summary: Pulumi run
 description: |
-  This is a template for a simple trigger.
+  This is a template for a Pulumi run step
 
 responders:
 - webhook
@@ -18,4 +18,4 @@ build:
   kind: Docker
 
 publish:
-  repository: relaysh/pulumi-trigger-template
+  repository: relaysh/pulumi-step-run
