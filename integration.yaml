@@ -3,7 +3,7 @@ kind: Integration
 name: pulumi
 channel: stable
 version: v20200601
-summary: Use pulumi.io with Relay
+summary: Pulumi
 license: Apache-2.0
 homepage: https://github.com/relay-integrations/relay-pulumi
 source: https://github.com/relay-integrations/relay-pulumi
