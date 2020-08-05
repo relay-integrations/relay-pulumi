@@ -9,7 +9,7 @@ homepage: https://github.com/relay-integrations/relay-pulumi
 source: https://github.com/relay-integrations/relay-pulumi
 
 description: |
-  This integration lets you use pulumi actions inside a relay workflow.
+  Pulumi is an open source infrastructure as code tool for creating, deploying, and managing cloud infrastructure.
 
 owner:
   name: Puppet, Inc.
