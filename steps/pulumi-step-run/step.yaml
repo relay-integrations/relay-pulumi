@@ -1,6 +1,6 @@
 apiVersion: integration/v1
 kind: Step
-name: template
+name: pulumi-step-run
 version: 1
 summary: Pulumi run
 description: |

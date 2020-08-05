@@ -18,4 +18,4 @@ build:
   kind: Docker
 
 publish:
-  repository: relaysh/pulumi-trigger-template
+  repository: relaysh/template
