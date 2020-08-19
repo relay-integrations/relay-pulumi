@@ -34,7 +34,7 @@ GITHUB_WORKSPACE=/workspace
 [[ $(jq -e .pull_request.number $GITHUB_EVENT_PATH) ]] && PULUMI_CI=pr
 
 # ultra-simple copy of actions/checkout@v2 
-git clone $(jq -r .repository.ssh_url $GITHUB_EVENT_PATH) ${GITHUB_WORKSPACE}
+git clone $(jq -r .repository.clone_url $GITHUB_EVENT_PATH) ${GITHUB_WORKSPACE}
 cd ${GITHUB_WORKSPACE} || (echo "could not find repo directory" && exit 1)
 
 /usr/bin/pulumi-action ${PULUMI_ARGS}
