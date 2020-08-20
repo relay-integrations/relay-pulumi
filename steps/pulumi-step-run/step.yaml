@@ -2,9 +2,9 @@ apiVersion: integration/v1
 kind: Step
 name: pulumi-step-run
 version: 1
-summary: Pulumi run
+summary: Run Pulumi
 description: |
-  This is a template for a Pulumi run step
+  This step runs pulumi in a CI-style environment.
 
 responders:
 - webhook
