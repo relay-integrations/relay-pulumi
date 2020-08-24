@@ -32,9 +32,13 @@ GITHUB_TOKEN=$(ni get -p {.github_token})
 GITHUB_WORKSPACE=/workspace
 # if we're operating on a pull request, set PULUMI_CI=pr
 [[ $(jq -e .pull_request.number $GITHUB_EVENT_PATH) ]] && PULUMI_CI=pr
+# simple stack selection from parameter
+STACK=$(ni get -p {.stack})
 
 # ultra-simple copy of actions/checkout@v2 
 git clone $(jq -r .repository.clone_url $GITHUB_EVENT_PATH) ${GITHUB_WORKSPACE}
 cd ${GITHUB_WORKSPACE} || (echo "could not find repo directory" && exit 1)
 
-/usr/bin/pulumi-action ${PULUMI_ARGS}
+OUTPUT=$(/usr/bin/pulumi-action -s ${STACK} ${PULUMI_ARGS})
+
+ni output set -k output -v "$OUTPUT"
