@@ -39,6 +39,9 @@ STACK=$(ni get -p {.stack})
 git clone $(jq -r .repository.clone_url $GITHUB_EVENT_PATH) ${GITHUB_WORKSPACE}
 cd ${GITHUB_WORKSPACE} || (echo "could not find repo directory" && exit 1)
 
+# avoid spammy output by pre-installing any auto-detected plugins
+pulumi plugin install
+
 OUTPUT=$(/usr/bin/pulumi-action -s ${STACK} ${PULUMI_ARGS})
 
 ni output set -k output -v "$OUTPUT"
