@@ -12,6 +12,22 @@ responders:
 schemas:
   spec:
     $schema: http://json-schema.org/draft-07/schema#
+    type: object
+    required:
+    - event_payload
+    properties:
+      pulumi_backend_url:
+        type: string
+        description: Alternate backend specifier
+        default: api.pulumi.io
+      event_payload:
+        type: string
+        description: The complete payload of a github webhook. This must be a string of JSON.
+      pulumi_commandline:
+        type: string
+        description: The commandline to pass through to `pulumi ...`
+        default: preview
+    additionalProperties: false
 
 build:
   apiVersion: build/v1
