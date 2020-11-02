@@ -12,7 +12,7 @@ This integration provides interoperability with
 ## Workflows
 
 | Name | Description |
-| [github-relay-ci.yaml](workflows/github-relay-ci/) | Links Relay to a Pulumi application for 'preview'/'up' operations |
+| [github-relay-ci.yaml](workflows/github-relay-ci) | Links Relay to a Pulumi application for 'preview'/'up' operations |
 
 ## Contributing
 
