@@ -13,7 +13,7 @@ This integration provides interoperability with
 
 | Name | Description |
 |------|-------------|
-| [github-relay-ci](workflows/github-relay-ci) | Links Relay to a Pulumi application for 'preview'/'up' operations |
+| [pulumi-preview](workflows/pulumi-preview) | Links Relay to a Pulumi application for 'preview'/'up' operations |
 
 ## Contributing
 

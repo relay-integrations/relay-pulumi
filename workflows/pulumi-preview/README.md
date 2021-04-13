@@ -1,4 +1,4 @@
-# github-relay-ci workflow
+# pulumi-preview workflow
 
 This workflow links a github repository containing a Pulumi
 application to Relay, in order to run CI (test) and CD (deploy)
